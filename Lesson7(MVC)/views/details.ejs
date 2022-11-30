@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/header.ejs") %>
+
+
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <div class="details content">
+        <h2><%=blog.title%></h2>
+        <div class="content">
+            <p>
+                <%=blog.body%>
+            </p>
+        </div>
+        <!-- <button type="button" color="warn" onclick="deleteBlog('<%=blog._id%>')">Delete</button> -->
+        <a class="delete" data-doc="<%=blog._id%>">
+            <img src="/delete_icon.svg" alt="Delete icon"/>
+        </a>
+    </div>
+    <script>
+        // const deleteBlog = (id) =>{
+        //     console.log(id);
+        //     fetch("/blogs/"+id,{method:'POST'})
+        //     .then((res)=>{
+        //         console.log("Deleted");
+        //         fetch("/",{method:'GET'})
+        //     })
+        //     .catch(err=>{
+        //         console.log("error occured");
+        //     })
+        // }
+        const trashcan = document.querySelector('a.delete');
+        trashcan.addEventListener('click', (e) => {
+            const endpoint = `/blogs/${trashcan.dataset.doc}`;
+            
+                fetch(endpoint, {
+                        method: 'DELETE'
+                    })
+                    .then((response) => response.json())
+                    .then((data) => window.location.href = data.redirect)
+            .catch((err) => {
+                console.log(err);
+            })
+        });
+    </script>
+</body>
+
+</html>

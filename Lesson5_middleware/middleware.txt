@@ -1,0 +1,20 @@
+middleware : anything that runs in between the request
+that is sent and the response that is received 
+
+app.get is also basically a middleware that runs only for get requests
+
+Order of middleware is very important
+
+app.use will be fired of every request depending on its position
+
+Use of middleware:
+Logging middleware
+Authentication check middleware
+Middleware to parse JSON data from requests
+Return 404 pages
+
+Express doesn't know how to move on after app.use so use 'next' function
+
+Some third party middlwares: morgan for logging
+
+middleware for public or static files: app.use(express.static('<folder name>'))

@@ -1,0 +1,12 @@
+mongoose: ODM object document mapping library
+It makes inserting, updating and deleting documents easy.
+
+Steps to use mongoose and mongodb
+1. Schema: Structure of document stored in a collection
+-title(String), required
+-age(Number), required
+
+2. Next we create a model based on that Schema.
+Models which are based on schema allows us to communicate with databse collections
+
+

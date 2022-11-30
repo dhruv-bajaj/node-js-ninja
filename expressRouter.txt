@@ -1,0 +1,5 @@
+Express router allows us to extract the routes in
+different files
+Basically create mini app.js and then use then all 
+in app.js
+Makes handling of rounds easy.

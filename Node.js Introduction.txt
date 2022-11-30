@@ -1,0 +1,16 @@
+Javascript was made for interactivity.
+Node allows us to run javascript on server.
+Computers can not directly run javascript. They need to convert it to machine code.
+
+But we can run it in browser. How ?
+Inside a browser, there is V8 engine (written in C++ by google) that compiles js to machine code at runtime.
+So we can run javascript inside the browser.
+
+Node.js is also written in C++. It wraps V8 engine. So node.js can run on our computer and it can compile our js into machine code.
+So it can help us run code in servers. Node not only wraps V8, it provides other features as well:
+Read and write files on a computer.
+Connect to database.
+Act as a server for content.
+
+
+Use node <filename> to run the javascript file.

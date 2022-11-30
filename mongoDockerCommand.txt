@@ -1,0 +1,6 @@
+docker run --name mongodb -d -p 27017:27017 -v /Desktop/Desk/docker-volumes/mongo-volume:/etc/mongo -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password mongo
+
+
+How to connect to mongo from node
+https://zellwk.com/blog/local-mongodb/
+
